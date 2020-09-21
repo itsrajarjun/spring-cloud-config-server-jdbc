@@ -9,22 +9,7 @@
 - spring-boot-starter-jdbc
 - ojdbc8
 
-#Usage
-
-
-- properties
-#spring.cloud.config.server.git.uri=
-spring.profiles.active=jdbc
-spring.datasource.hikari.connection-timeout=5000
-spring.datasource.hikari.maximum-pool-size=10
-spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-spring.cloud.config.server.jdbc.sql= SELECT PROP_KEY, VALUE from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?
-spring.cloud.config.server.jdbc.order=1
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521:ORCL
-spring.datasource.username=raj
-spring.datasource.password=raj
-
-- Oracle Script
+# DB Script
 create table PROPERTIES
 (
     id          number,
